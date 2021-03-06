@@ -30,29 +30,29 @@ Encontre [aqui](https://github.com/zero7um/DesafioDeliveryMuch/blob/main/Deliver
 
 <h2>Plano de Testes</h2>
 
-1. Test Coverage Model
+1. Modelo de Cobertura de Testes
 2. Aderência do contrato JSON
 3. Testes exploratórios
 
-<b>Test Coverage Model</h3>
+<b>Modelo de Cobertura de Testes</b>
 
-O Test Coverage Model foi utilizado para identificar e categorizar as suítes de testes através de diferentes níveis de complexidade, sendo  o nível 0 o mais fraco e o nível 7 o mais forte/complexo, abaixo segue uma breve explicação de como cada nível é utilizado e o que cada um valida:
+O Modelo de cobertura de testes foi utilizado para identificar e categorizar as suítes de testes através de diferentes níveis de complexidade, sendo  o nível 0 o mais fraco e o nível 7 o mais forte/complexo, abaixo segue uma breve explicação de como cada nível é utilizado e o que cada um valida:
 
 Nivel 0: aqui não há cobertura específica para ser realizada.
 
-Nivel 1: possui cobertura bastante fraca, apenas requer conhecimento sobre os paths, sendo assim há 2 paths/end points a serem verificados. Aqui foi validado que é possível fazer uma chamada em cada end point para validar seu funcionamento. Logo, 2 endpoints e 1 teste para cada.
+Nivel 1: possui cobertura bastante fraca, apenas requer conhecimento sobre os paths, sendo assim há 2 caminhos (paths/end points) a serem verificados. Aqui foi validado que é possível fazer uma chamada em cada end caminho para validar seu funcionamento. Logo, 2 caminhos e 1 teste para cada.
 
 Nivel 2: nesse nível todas as operações que estão sendo enviadas ao serviço foram validadas estando de acordo com um dos requisitos disponibilizado. O serviço aceita apenas solicitações via método GET. Desse modo, 2 testes foram realizados, um para cada serviço.
 
-Nivel 3: nesse nível foi validado o content-type de minha requisição, como meu escopo declara que apenas requisições via GET são aceitas e não há um body a ser inserido, é possível validar apenas o output da minha requisição que deve retornar um JSON. Sendo assim 2 testes são necessários para a validação. Mais adiante será possível visualizar os testes realizados usando o Json Schema assim como sua validação automatizada.
+Nivel 3: nesse nível foi validado o tipo de conteúdo (content-type) de minha requisição, como meu escopo declara que apenas requisições via GET são aceitas e não há um corpo a ser enviado junto com a requisição, é possível validar apenas a saída/retorno (output) da minha requisição que deve retornar um JSON. Sendo assim 2 testes são necessários para a validação. Mais adiante será possível visualizar os testes realizados usando o Json Schema assim como sua validação automatizada.
 
 <i>Os nívels de 4 a 6 cobrem os PARÂMETROS</i>
 
-Nivel 4: aqui os parâmetros são validados, tipos de variáveis, campos e os dados a serem enviados. Porém por não haver um body para ser enviado na requisição, esse nível cobre apenas o <b>status code class</b>. Foi definido nos requisitos que apenas dois status code devem ser retornados, 200 AUTHORIZED e 400 BAD REQUEST. Dessa forma, 4 testes são necessários. 2 para cada serviço sendo um de sucesso e outro de falha.
+Nivel 4: aqui são validados os parâmetros , tipos de variáveis, campos e os dados a serem enviados. Porém por não haver um corpo para ser enviado na requisição, esse nível cobre apenas o <b>Classe do Código de Status</b>(status code class). Foi definido nos requisitos que apenas dois status code devem ser retornados, 200 AUTHORIZED e 400 BAD REQUEST. Dessa forma, 4 testes são necessários. 2 para cada serviço sendo um de sucesso e outro de falha.
 
-Nivel 5: nesse nível cada status code especificado é validado. Nesse contexto os testes validados no nível 4 validam comportam as validações desse niível.
+Nivel 5: nesse nível cada <b>Código de Status</b> especificado é validado. Nesse contexto os testes validados no nível 4 validam comportam as validações desse nível.
 
-Nivel 6: aqui o response body é checado afim de confirmar que atende ao formato esperado, JSON. O output precisa estar de acordo com o requisito. Sendo assim temos 2 testes um para cada serviço.
+Nivel 6: aqui o Corpo da Resposta (response body) é checado afim de confirmar que atende ao formato esperado, JSON. A saída precisa estar de acordo com o requisito. Sendo assim temos 2 testes um para cada serviço.
 
 Nivel 7: aqui o fluxo dos serviços são validados, é esperado que se possam testar a comunicação entre os serviços. Como não há dependência ou integração direta entre os dois ou com uma interface de usuário que exiba os valores obtidos nos outputs. Dessa forma, não é possível realizar esse nível. 
 
