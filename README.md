@@ -6,6 +6,26 @@ Este projeto foi desenvolvido afim de entregar a resolução do desafio proposto
 
 É possível encontrar os testes automatizados na pasta test [clicando aqui](https://github.com/zero7um/DesafioDeliveryMuch/tree/main/src/test/java)
 
+<h2>Execução do projeto</h2>
+
+Para executar o projeto é necessário:
+
+1. Possuir a versão 8 ou superior do Java instalada
+2. Baixar e clonar este repositório em um local desejado 
+3. Após abrir o projeto aguarde até que a IDE realize o download de todas as dependências necessárias e disponibilizadas no arquivo pom.xml (Intellij IDEA é recomendado para uma melhor experiência)
+
+
+<h3>Ferramentas utilizadas </h3>
+
+[IntelliJ IDEA Community Edition](https://www.jetbrains.com/pt-br/idea/download/#section=windows)
+
+[Postman](https://www.postman.com/downloads/)
+
+[JSON Schema Tool](https://jsonschema.net/home)
+
+<h3>Requisitos </h3>
+
+Encontre [aqui](https://github.com/zero7um/DesafioDeliveryMuch/blob/main/Delivery%20Much%20-%20QA%20Challenge.docx) os requisitos e solicitações do projeto.
 
 
 <h2>Plano de Testes</h2>
@@ -98,26 +118,13 @@ Nivel 7: aqui o fluxo dos serviços são validados, é esperado que se possam te
  </tbody>
   </table>
   
-Desafios encontrados
 
 <h3>Inconsistências/Bugs</h3>
 
 3 bugs encontrados
 
-<h3>Ferramentas utilizadas </h3>
-
-IntelliJ IDEA Community Edition
-
-Postman
-
-JSON Schema Tool
-
-<h3>Requisitos </h3>
-
-Encontre [aqui](https://github.com/zero7um/DesafioDeliveryMuch/blob/main/Delivery%20Much%20-%20QA%20Challenge.docx) os requisitos e solicitações do projeto.
-
-
 #bug01
+
 Descrição
 
 Ao fazer uma requisição via GET no serviço que retorna respostas em inglês enviando o número -10000 (menos dez mil), a resposta é exibida fora do formato definido pelo contrato JSON. O Correto seria ""full": "minus ten thousand"
@@ -126,12 +133,14 @@ Ao fazer uma requisição via GET no serviço que retorna respostas em inglês e
 
 
 #bug02
+
 Descrição
 Ao fazer uma requisição via GET no serviço que retorna respostas em português enviando o número 10000 (dez mil), o número por extenso é retornado na língua inglesa.
 ![](https://github.com/zero7um/DesafioDeliveryMuch/blob/main/img2.png)
 
 
-#bug03 encontrado
+#bug03 
+
 Descrição
 
 Ao fazer uma requisição via GET no serviço que retorna respostas em inglês enviando o número -10001 (menos dez mil e um), o status code exibido é o 401 UNAUTHORIZED. O correto de acordo com o contrato seria 400 BAD REQUEST.
