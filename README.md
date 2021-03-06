@@ -118,6 +118,7 @@ Nivel 7: aqui o fluxo dos serviços são validados, é esperado que se possam te
  </tbody>
   </table>
   
+  Desse modo, 12 testes foram necessários para atingir um maior nível de cobertura de testes.
 
 <h3>Inconsistências/Bugs</h3>
 
