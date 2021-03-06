@@ -125,7 +125,7 @@ Após a realização de testes exploratórios, 3 bugs foram encontrados. Abaixo 
 
 #bug01
 
-Descrição
+Descrição:
 
 Ao fazer uma requisição via GET no serviço que retorna respostas em inglês enviando o número -10000 (menos dez mil), a resposta é exibida fora do formato definido pelo contrato JSON. O Correto seria ""full": "minus ten thousand"
 
@@ -134,14 +134,15 @@ Ao fazer uma requisição via GET no serviço que retorna respostas em inglês e
 
 #bug02
 
-Descrição
+Descrição:
+
 Ao fazer uma requisição via GET no serviço que retorna respostas em português enviando o número 10000 (dez mil), o número por extenso é retornado na língua inglesa.
 ![](https://github.com/zero7um/DesafioDeliveryMuch/blob/main/img2.png)
 
 
 #bug03 
 
-Descrição
+Descrição:
 
 Ao fazer uma requisição via GET no serviço que retorna respostas em inglês enviando o número -10001 (menos dez mil e um), o status code exibido é o 401 UNAUTHORIZED. O correto de acordo com o contrato seria 400 BAD REQUEST.
 ![](https://github.com/zero7um/DesafioDeliveryMuch/blob/main/img3.png)
