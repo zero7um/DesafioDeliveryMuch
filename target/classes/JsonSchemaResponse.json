@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://challengeqa.staging.devmuch.io",
+  "type": "object",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "extenso": "dez"
+    }
+  ],
+  "required": [
+    "extenso"
+  ],
+  "properties": {
+    "extenso": {
+      "$id": "#/properties/extenso",
+      "type": "string",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "dez"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
