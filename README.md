@@ -121,7 +121,7 @@ Nivel 7: aqui o fluxo dos serviços são validados, é esperado que se possam te
 
 <h3>Inconsistências/Bugs</h3>
 
-3 bugs encontrados
+Após a realização de testes exploratórios, 3 bugs foram encontrados. Abaixo as respectivas descrições e evidências anexadas.
 
 #bug01
 
